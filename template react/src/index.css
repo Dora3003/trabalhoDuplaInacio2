@@ -1,0 +1,116 @@
+:root {
+  /* Cores Primaveris */
+  --color-primary: #50c878;       /* Verde-Primavera Vibrante (Mint) */
+  --color-primary-hover: #43b064; /* Verde mais escuro no hover */
+
+  /* Fundo Suave (Lilás muito claro ou "off-white" suave) */
+  --color-dark-bg: #f8f8ff;      /* Ghost White / Lilás Suave */
+  --color-dark-text: #333333;     /* Texto Escuro (para contraste no fundo claro) */
+
+  /* Fundo Claro (Ainda mais claro, se o usuário estiver no modo light) */
+  --color-light-bg: #ffffff;
+  --color-light-text: #213547;
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  /* Agora, o tema "dark" é o nosso tema primaveril principal */
+  color-scheme: light dark; 
+  color: var(--color-dark-text);
+  background-color: var(--color-dark-bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  /* Garante que o conteúdo fique no centro da tela */
+  display: flex;
+  justify-content: center; /* Centraliza Horizontalmente */
+  align-items: center; /* Centraliza Verticalmente */
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.8em;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+a {
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+}
+
+button {
+  border-radius: 10px;
+  border: 1px solid transparent;
+  padding: 0.8em 1.8em;
+  font-size: 1.05em;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+
+  /* Cor do botão: Fundo branco/claro com texto escuro para contraste */
+  background-color: #ffffff; 
+  color: var(--color-dark-text);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+
+  transition: background-color 0.25s, box-shadow 0.25s, transform 0.1s, border-color 0.25s;
+}
+
+button:hover {
+  /* Borda com a nova cor primária e fundo levemente colorido */
+  border-color: var(--color-primary); 
+  background-color: #f0f0f0; 
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+}
+
+button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Ajuste do modo Light para garantir que ele seja o mais claro possível, 
+  mantendo o tema primaveril como padrão.
+*/
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--color-light-text);
+    background-color: var(--color-light-bg);
+  }
+  
+  a:hover {
+    color: var(--color-primary);
+  }
+  
+  button {
+    background-color: #f0f0f0;
+    color: var(--color-light-text);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  button:hover {
+    border-color: var(--color-primary);
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+}
