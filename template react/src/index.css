@@ -1,14 +1,14 @@
 :root {
   /* Cores Primaveris */
-  --color-primary: #50c878;       /* Verde-Primavera Vibrante (Mint) */
-  --color-primary-hover: #43b064; /* Verde mais escuro no hover */
+  --color-primary: #3849e0;      
+  --color-primary-hover: #32a8fc;
 
   /* Fundo Suave (Lilás muito claro ou "off-white" suave) */
-  --color-dark-bg: #f8f8ff;      /* Ghost White / Lilás Suave */
+  --color-dark-bg: #cbe9f0;      /* Ghost White / Lilás Suave */
   --color-dark-text: #333333;     /* Texto Escuro (para contraste no fundo claro) */
 
   /* Fundo Claro (Ainda mais claro, se o usuário estiver no modo light) */
-  --color-light-bg: #ffffff;
+  --color-light-bg: #e1f7ff;
   --color-light-text: #213547;
 
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -49,6 +49,18 @@ a {
   transition: color 0.3s ease;
 }
 
+input{
+  background-color: #005163;
+  margin: 5px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  padding: 0.8em 1.8em;
+  font-size: 1.05em;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+
 a:hover {
   color: var(--color-primary-hover);
   text-decoration: underline;
@@ -56,6 +68,7 @@ a:hover {
 
 button {
   border-radius: 10px;
+  margin: 5px;
   border: 1px solid transparent;
   padding: 0.8em 1.8em;
   font-size: 1.05em;
